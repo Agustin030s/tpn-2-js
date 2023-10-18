@@ -6,6 +6,7 @@
     <meta name="description" content="Trabajo practico numero dos de la materia programacion web">
     <meta name="keywords" content="html, css, javascript, ajax, DOM, apis">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -56,7 +57,7 @@
                     <div class="border border-warning rounded-2 p-2 ">
                         <h5 class="text-center">Listado de Estudiantes</h5>
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table class="table table-hover text-center">
                                 <thead>
                                     <tr>
                                         <th>Legajo</th>
@@ -67,18 +68,19 @@
                                     </tr>
                                 </thead>
 
-                                <tbody>
-
+                                <tbody id="tablaEstudiantes">
+                                  
                                 </tbody>
 
                             </table>
+                            <small class="text-muted">Estudiantes</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="border border-warning rounded-2 p-2">
                         <h5 class="text-center">Agregar Estudiante</h5>
-                        <form id="formEstudiantes">
+                        <form method="post" id="formEstudiantes">
                             <div class="mb-2">
                                 <label for="legajo" class="form-label">Legajo:</label>
                                 <input type="text" id="legajo" class="form-control" minlength="1" maxlength="10" required>
@@ -116,8 +118,11 @@
           </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script src="./js/gestionEstudiantes.js"></script>
+    <script type="module" src="./js/gestionEstudiantes.js"></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
-export default class Persona{
-    constructor(apellidos, nombres){
+export default class persona{
+    constructor(apellidos,nombres){
         this.apellidos = apellidos;
         this.nombres = nombres;
     }
 
     get getApellidos(){
-        return `${this.apellidos}`
+        return `${this.apellidos}`;
+    }
+    get getNombres(){
+        return `${this.nombres}`;
     }
 
-    get getNombres(){
-        return `${this.nombres}`
-    }
 }
