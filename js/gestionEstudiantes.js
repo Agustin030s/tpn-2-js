@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let arrayEstudiantes = datosIniciales();
 
-    function renderizar(){
+    function agregarDatosIniciales(){
         arrayEstudiantes.forEach( e => {
 
             const tr = document.createElement('tr');
@@ -76,9 +76,9 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function validarLegajo()
+    function validarLegajo(){}
 
-    renderizar();
+    agregarDatosIniciales();
 
     
 });
