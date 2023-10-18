@@ -76,7 +76,17 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function validarLegajo(){}
+    function validarLegajo(legajo){
+        let bandera = true;
+
+        arrayEstudiantes.forEach( e =>{
+            if(e.legajo === legajo){
+                bandera = false
+            }
+        });
+
+        return bandera;
+    }
 
     agregarDatosIniciales();
 
