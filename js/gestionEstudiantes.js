@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let arrayEstudiantes = datosIniciales();
 
-    function agregarDatosIniciales(){
+    function agregarEstudiantes(){
         arrayEstudiantes.forEach( e => {
 
             const tr = document.createElement('tr');
@@ -76,11 +76,21 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    //Formulario
+    function limpiarCamposDelFormulario(leg, ap, nom, nota){
+        tablaEstudiantes.removeChild(tablaEstudiantes.getElementsByTagName('tr')[0]);
+        tablaEstudiantes.innerHTML = "";
+        leg.value="";
+        ap.value="";
+        nom.value="";
+        nota.value="";
+    }
+
     function validarLegajo(legajo){
         let bandera = true;
 
         arrayEstudiantes.forEach( e =>{
-            if(e.legajo === legajo){
+            if(e.legajo == legajo){
                 bandera = false
             }
         });
@@ -88,7 +98,28 @@ window.addEventListener("DOMContentLoaded", () => {
         return bandera;
     }
 
-    agregarDatosIniciales();
+    formularioEstudiantes.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        const inputLegajo = document.getElementById("legajo");
+        const inputApellidos = document.getElementById("apellidos");
+        const inputNombres = document.getElementById("nombres");
+        const inputNota = document.getElementById("nota");
+
+        let validacion = validarLegajo(inputLegajo.value);
+
+        if(validacion){
+            arrayEstudiantes.push(
+                new estudiante(inputLegajo.value, inputApellidos.value, inputNombres.value, inputNota.value)
+            );
+            limpiarCamposDelFormulario(inputLegajo, inputApellidos, inputNombres, inputNota);
+            agregarEstudiantes();
+        }
+        else{
+            alert("El legajo ingresado " + inputLegajo.value + " ya existe, por favor ingrese otro legajo.");
+        }
+    });
+
+    agregarEstudiantes();
 
     
 });
