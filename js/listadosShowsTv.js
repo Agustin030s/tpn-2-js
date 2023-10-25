@@ -28,7 +28,9 @@ window.addEventListener("DOMContentLoaded", () => {
                                     <p class="m-0"><b>Estado:</b> ${status}</p>
                                     <p class="m-0"><i class="fa-solid fa-star" style="color: #ffdd00;"></i>${rating.average || "-"}/10</p>
                                     <p class="card-text">${summary || "<p>Sin descripción</p>"}</p>
-                                    <a href="" class="btn btn-primary">Ver mas</a>
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-primary w-100">Ver más</a>
+                                    </div>
                                 </div>
                             </div>
                         `;

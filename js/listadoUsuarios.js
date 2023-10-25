@@ -25,9 +25,9 @@
             userCard.className = "col-sm-6 col-md-4 col-lg-3 user-card mt-3";
 
             userCard.innerHTML = 
-            `<div class="card">
+            `<div class="card h-100">
                 <img src="${u.picture.large}" class="card-img-top" alt="Usuario">
-                <div class="card-body ">
+                <div class="card-body">
                     <h5 class="card-title">${u.name.first} ${u.name.last}</h5>
                     <p class="card-text">Email: ${u.email}</p>
                     <p class="card-text">Teléfono: ${u.phone}</p>
